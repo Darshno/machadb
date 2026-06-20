@@ -105,46 +105,8 @@ sahaaya       -- HELP: Command list
 hogthini      -- EXIT: Close the terminal and go sleep
 ```
 
----
 
-## 🌍 How to Deploy (Going to Production)
 
-You want to deploy this? Nkn, you are brave boss. Here is how you push this to "Production":
-
-### 1. Folder Setup
-MachaDB stores everything locally in files (Pager, Buffer Pool, Catalog). So wherever you run your Python script, MachaDB will create its `.tbl` and `.json` files. 
-
-```python
-# Pass an absolute path for production so you don't lose data macha!
-db = MachaDB("/var/data/machadb_prod")
-```
-
-### 2. The Cloud Server (EC2 / VPS)
-1. Get a cheap Ubuntu server.
-2. Install Python 3.10+.
-3. Put the `machadb` folder there.
-4. If you're building an API, wrap MachaDB with **FastAPI** or **Flask**.
-
-*Example FastAPI wrapper:*
-```python
-from fastapi import FastAPI
-from machadb import MachaDB
-
-app = FastAPI()
-db = MachaDB("/app/data")
-
-@app.get("/users")
-def get_users():
-    return db.execute("torsu * jana")
-```
-
-### 3. Running it
-Use `uvicorn` or `gunicorn` with `systemd` to keep it running.
-> **Warning Boss:** MachaDB doesn't have concurrency locks yet. Run your web server with **only 1 worker** (`--workers 1`), or your files will get corrupted faster than Silk Board traffic!
-
-### 4. Backups
-Because we persist to `.tbl` files and a `jamakhaana.json` catalog, "taking a backup" just means copying the folder. Write a cron job to zip the folder every night.
-```bash
 0 3 * * * tar -czvf /backups/machadb_$(date +\%F).tar.gz /var/data/machadb_prod
 ```
 
