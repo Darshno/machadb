@@ -56,7 +56,7 @@ huttu jana (
 ### 2. INSERT (`haaku`)
 When you want to dump data inside:
 ```sql
-haaku jana (1, 'Dheer', haan)
+haaku jana (1, 'deshawn', haan)
 haaku jana (2, 'Boss', illa)
 ```
 
