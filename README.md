@@ -106,10 +106,10 @@ hogthini      -- EXIT: Close the terminal and go sleep
 ```
 
 
+### Snapshots:
+<img width="679" height="414" alt="image" src="https://github.com/user-attachments/assets/884d78ba-f756-4672-bb2e-a3ba7de34009" />
+<img width="948" height="411" alt="image" src="https://github.com/user-attachments/assets/c1352c65-c226-49fd-96c7-c06e48644992" />
+<img width="214" height="47" alt="image" src="https://github.com/user-attachments/assets/f88c3320-f49e-45ab-a329-c88acbf594af" />
 
-0 3 * * * tar -czvf /backups/machadb_$(date +\%F).tar.gz /var/data/machadb_prod
-```
-
----
 
 Made with ❤️ and filter coffee. If it breaks, raise an issue, but don't expect a reply until after our exams.
