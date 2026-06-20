@@ -1,0 +1,34 @@
+{
+  "magic": "MACHADB_JAMAKHAANA",
+  "version": 1,
+  "tables": {
+    "jana": {
+      "schema": {
+        "table_name": "jana",
+        "columns": [
+          {
+            "name": "id",
+            "data_type": "sankhye",
+            "is_primary_key": false,
+            "is_nullable": true
+          },
+          {
+            "name": "hesar",
+            "data_type": "pathya",
+            "is_primary_key": false,
+            "is_nullable": true
+          },
+          {
+            "name": "active",
+            "data_type": "haan_illa",
+            "is_primary_key": false,
+            "is_nullable": true
+          }
+        ]
+      },
+      "data_file": "./machadb_data\\jana.tbl",
+      "row_count": 0
+    }
+  },
+  "indexes": {}
+}

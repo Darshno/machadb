@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MachaDB Playground</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="title-wrapper">
+                <h1>☕ MachaDB</h1>
+                <span class="badge">v1.0.0-chai-powered</span>
+            </div>
+            <p class="subtitle">The database engine running on pure Bangalore slang.</p>
+        </header>
+
+        <main>
+            <div class="glass-panel editor-panel">
+                <div class="panel-header">
+                    <h2>pydb></h2>
+                    <button id="run-btn" class="primary-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        Run Query
+                    </button>
+                </div>
+                <textarea id="query-input" placeholder="Type your query macha... (e.g., huttu jana (id sankhye, hesar pathya))" spellcheck="false"></textarea>
+            </div>
+
+            <div class="glass-panel results-panel">
+                <div class="panel-header">
+                    <h2>Results</h2>
+                    <span id="status-indicator" class="status-badge hidden"></span>
+                </div>
+                
+                <div id="results-content" class="results-content empty-state">
+                    Run a query to see results here boss.
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            Built by sleep-deprived engineering students. Supported commands: <span class="cmd">huttu</span>, <span class="cmd">haaku</span>, <span class="cmd">torsu</span>, <span class="cmd">change_madu</span>, <span class="cmd">en_kilthya</span>, <span class="cmd">sutaku</span>, <span class="cmd">yenide</span>.
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
